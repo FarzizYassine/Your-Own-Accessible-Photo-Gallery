@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initGallery()">
+
+    <div class="gallery">
+        <img src="image1.jpg" alt="Description 1" tabindex="0" onmouseover="showPreview('image1.jpg', 'Description 1')" onmouseleave="hidePreview()" onfocus="showPreview('image1.jpg', 'Description 1')" onblur="hidePreview()">
+        <img src="image2.jpg" alt="Description 2" tabindex="0" onmouseover="showPreview('image2.jpg', 'Description 2')" onmouseleave="hidePreview()" onfocus="showPreview('image2.jpg', 'Description 2')" onblur="hidePreview()">
+        <img src="image3.jpg" alt="Description 3" tabindex="0" onmouseover="showPreview('image3.jpg', 'Description 3')" onmouseleave="hidePreview()" onfocus="showPreview('image3.jpg', 'Description 3')" onblur="hidePreview()">
+        <img src="image4.jpg" alt="Description 4" tabindex="0" onmouseover="showPreview('image4.jpg', 'Description 4')" onmouseleave="hidePreview()" onfocus="showPreview('image4.jpg', 'Description 4')" onblur="hidePreview()">
+        <img src="image5.jpg" alt="Description 5" tabindex="0" onmouseover="showPreview('image5.jpg', 'Description 5')" onmouseleave="hidePreview()" onfocus="showPreview('image5.jpg', 'Description 5')" onblur="hidePreview()">
+        <img src="image6.jpg" alt="Description 6" tabindex="0" onmouseover="showPreview('image6.jpg', 'Description 6')" onmouseleave="hidePreview()" onfocus="showPreview('image6.jpg', 'Description 6')" onblur="hidePreview()">
+    </div>
+
+    <div id="preview" class="preview-container">
+        <img id="preview-image" alt="">
+        <p id="preview-text"></p>
+    </div>
+
+    <script>
+        function initGallery() {
+    console.log("Gallery initialized");
+}
+
+function showPreview(imageSrc, description) {
+    document.getElementById("preview-image").src = imageSrc;
+    document.getElementById("preview-text").textContent = description;
+    document.getElementById("preview").style.display = "block";
+}
+
+function hidePreview() {
+    document.getElementById("preview").style.display = "none";
+}
+
+    </script>
+</body>
+</html>
